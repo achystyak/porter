@@ -4,31 +4,31 @@ Fast, flexible, minimalist web framework written in C++.
 
 ## Features
 
-* 🏗️ 	**HTTP REST Architectured**
+* 🏗️ **HTTP REST Architectured**
 
-* 🧬 	**Domain Driven Design**
+* 🧬 **Domain Driven Design**
 
-* 🥬 	**Mongo Databased**
+* 🥬 **Mongo Databased**
 
-* 🚢 	**Docker Deployable**
+* 🚢 **Docker Deployable**
 
-* 🔎 	**JWT Authentication**
+* 🔎 **JWT Authentication**
 
-* 👀 	**Permission-based Authorization**
+* 👀 **Permission-based Authorization**
 
-* 📅 	**Tasks Scheduling**
+* 📅 **Tasks Scheduling**
 
-* 📻 	**WebSocket Connections**
+* 📻 **WebSocket Connections**
 
-* 🚇 	**MQTT Queues**
+* 🚇 **MQTT Queues**
 
-* 🌐 	**Curl Networking**
+* 🌐 **Curl Networking**
 
-* 🏎️ 	**Model / API Code Generation**
+* 🏎️ **Model / API Code Generation**
 
-* 📎 	**Tiny Config (including globally)**
+* 📎 **Tiny Config (including globally)**
 
-* 📝 	**Easy Logging System**
+* 📝 **Easy Logging System**
 
 # Requirements
 
