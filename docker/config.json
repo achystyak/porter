@@ -1,0 +1,12 @@
+{
+    "url": "0.0.0.0",
+    "port": 8000,
+    "mongo": {
+        "uri": "mongodb://mongodb:27017",
+        "database": "local"
+    },
+    "jwt": {
+        "timeout": 3600,
+        "secret": "vvaTMRX3JvrW4VYMLxMpm66kfU66Gemp"
+    }
+}

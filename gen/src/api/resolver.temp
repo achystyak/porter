@@ -1,0 +1,102 @@
+#pragma once
+#include "../../base/resolver/resolver.hpp"
+#include "../../base/libs/json/json.hpp"
+
+#include "<l>.service.hpp"
+#include "<l>.hpp"
+#include "<l>.inputs.hpp"
+
+using namespace nlohmann;
+
+class <u>Resolver : public Resolver
+{
+public:
+    <u>Resolver() : Resolver("/<l>s")
+    {
+        resolve(
+            GET, "/find", [=](const Request &request)
+            { return this->findById(request); },
+            RO_AUTH_GUARDED, {Action::Read, Domain::<u>});
+
+        resolve(
+            GET, "/list", [=](const Request &request)
+            { return this->find(request); },
+            RO_AUTH_GUARDED, {Action::Read, Domain::<u>});
+
+        resolve(
+            POST, "", [=](const Request &request)
+            { return this->create(request); },
+            RO_AUTH_GUARDED, {Action::Create, Domain::<u>});
+
+        resolve(
+            PATCH, "", [=](const Request &request)
+            { return this->updateById(request); },
+            RO_AUTH_GUARDED, {Action::Update, Domain::<u>});
+
+        resolve(
+            DELETE, "", [=](const Request &request)
+            { return this->removeById(request); },
+            RO_AUTH_GUARDED, {Action::Delete, Domain::<u>});
+    }
+
+    Response find(const Request &request)
+    {
+        Find<u>Input input;
+        if (input.parse(request.body))
+        {
+            std::vector<DB_<u>::<u>> <l>s = <u>Service::shared()->find(input.toDocument());
+            json result = <l>s;
+            return Response::json(result.dump());
+        }
+        return Response::badRequest();
+    }
+
+    Response findById(const Request &request)
+    {
+        FindOne<u>Input input;
+        if (input.parse(request.queries))
+        {
+            DB_<u>::<u> <l> = <u>Service::shared()->findOne(input.toFilter());
+            if (<l>.id.get())
+            {
+                json result = <l>;
+                return Response::json(result.dump());
+            }
+            return Response::notFound();
+        }
+        return Response::badRequest();
+    }
+
+    Response create(const Request &request)
+    {
+        Create<u>Input input;
+        if (input.parse(request.body))
+        {
+            json result = <u>Service::shared()->create(input.entity);
+            return Response::json(result.dump());
+        }
+        return Response::badRequest();
+    }
+
+    Response updateById(const Request &request)
+    {
+        Update<u>Input input;
+        if (input.parse(request.body))
+        {
+            json result = <u>Service::shared()->update(input.toFilter(), input.toDocument());
+            return Response::json(result.dump());
+        }
+        return Response::badRequest();
+    }
+
+    Response removeById(const Request &request)
+    {
+        Delete<u>Input input;
+        if (input.parse(request.body))
+        {
+            json result = <u>Service::shared()->remove(input.toFilter());
+            return Response::json(result.dump());
+        }
+        return Response::badRequest();
+    }
+};

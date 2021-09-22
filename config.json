@@ -1,0 +1,12 @@
+{
+    "url": "localhost",
+    "port": 7000,
+    "mongo": {
+        "uri": "mongodb://localhost:27017",
+        "database": "harbor_db"
+    },
+    "jwt": {
+        "timeout": 3600,
+        "secret": "vvaTMRX3JvrW4VYMLxMpm66kfU66Gemp"
+    }
+}

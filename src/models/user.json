@@ -1,0 +1,22 @@
+{
+    "email": "string",
+    "password": "string",
+    "firstName": "string",
+    "lastName": "string",
+    "permissions": [
+        {
+            "type": "Can",
+            "domain": "User",
+            "actions": [
+                "Read",
+                "Update",
+                "Delete"
+            ],
+            "filter": {
+                "email": {
+                    "$regex": "admin"
+                }
+            }
+        }
+    ]
+}

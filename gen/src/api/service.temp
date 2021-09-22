@@ -1,0 +1,11 @@
+#pragma once
+#include "../../base/service/service.hpp"
+#include "../../base/libs/json/json.hpp"
+#include "../../base/common/shared.hpp"
+
+#include "<l>.hpp"
+
+class <u>Service : public Service<DB_<u>::<u>>
+{
+    SERVICE(<u>Service, Domain::<u>, "<l>s")
+};

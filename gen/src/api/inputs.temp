@@ -1,0 +1,27 @@
+#pragma once
+#include "../../base/inputs/inputs.hpp"
+#include "../../base/libs/json/json.hpp"
+
+#include "<l>.hpp"
+
+using namespace nlohmann;
+
+class FindOne<u>Input : public FindOneInput
+{
+};
+
+class Find<u>Input : public FindInput<DB_<u>::<u>>
+{
+};
+
+class Create<u>Input : public CreateInput<DB_<u>::<u>>
+{
+};
+
+class Update<u>Input : public UpdateInput<DB_<u>::<u>>
+{
+};
+
+class Delete<u>Input : public DeleteInput
+{
+};
