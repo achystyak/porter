@@ -1,18 +1,18 @@
 # Porter
 
-Fast, flexible, minimalist web framework written in C++.
+Fast, flexible, minimalist web framework written in C++
 
 ## Features
 
-* 🏗️ **HTTP REST Architectured**
+* 🏗️ **REST Architectured**
 
-* 🧬 **Domain Driven Design**
+* 🧬 **Domain Driven Designed**
 
 * 🥬 **Mongo Databased**
 
 * 🚢 **Docker Deployable**
 
-* 🔎 **JWT Authentication**
+* 🔎 **Jwt Authentication**
 
 * 👀 **Permission-based Authorization**
 
@@ -24,13 +24,13 @@ Fast, flexible, minimalist web framework written in C++.
 
 * 🌐 **Curl Networking**
 
-* 🏎️ **Model / API Code Generation**
+* 🏎️ **Model/API Code Generation**
 
 * 📎 **Tiny Config (including globally)**
 
 * 📝 **Easy Logging System**
 
-# Requirements
+## Requirements
 
 - g++ (C++17)
 - openssl
@@ -38,7 +38,7 @@ Fast, flexible, minimalist web framework written in C++.
 - Mongocxx Driver https://github.com/mongodb/mongo-cxx-driver
 - CPR library https://github.com/whoshuu/cpr.git
 
-# Build and Run
+## Build and Run
 
 `$_ dev.sh` - building and running local server
 
@@ -585,7 +585,7 @@ Ability model contains:
 
 `filter` - used to filter which data is allowed
 
-`/base/auth//ability/ability.hpp`
+`/base/auth/ability/ability.hpp`
 
 ```cpp
 class Ability
@@ -601,7 +601,7 @@ public:
 
 Ability Factory provides methods for setting up abilities for concrete user. Wecan specify what user can or cannot doing with your API:
 
-`/base/auth//ability/ability.factory.hpp`
+`/base/auth/ability/ability.factory.hpp`
 
 ```cpp
 class AbilityFactory
